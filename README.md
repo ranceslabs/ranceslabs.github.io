@@ -1,5 +1,10 @@
 # Shared website for Jesse Rances's mobile games
 
+<!-- SITE HOST: https://ranceslabs.github.io
+     Planned GitHub Pages user site; the GitHub account is NOT created yet.
+     If the host changes, search-and-replace "https://ranceslabs.github.io" across the repo
+     (bunker-nights/*.html show the full public URL as link text and in their header comments). -->
+
 Plain static HTML/CSS for GitHub Pages. No build step, no JavaScript, no cookies, trackers or analytics.
 Games are published by **Jesse Rances as an individual developer**. Support and privacy contact for every game:
 **ranceslabs.support@gmail.com**.
@@ -17,10 +22,13 @@ last-bastion/
 ashdrift/
   privacy.html          Privacy policy (from airship-colony-legal/privacy-policy-draft.md v4)
   delete-data.html      Data-deletion request page
+bunker-nights/
+  privacy.html          Privacy policy (from game4-legal/site/privacy-policy.md)
+  delete-data.html      Data-deletion page (from game4-legal/site/data-deletion.md)
 ```
 
-Public URLs once published (replace `<user>` with the GitHub username):
-`https://<user>.github.io/last-bastion/privacy.html`, `.../last-bastion/delete-data.html`, and so on.
+Public URLs once published (planned host `https://ranceslabs.github.io`, see the comment at the top):
+`https://ranceslabs.github.io/last-bastion/privacy.html`, `.../last-bastion/delete-data.html`, and so on.
 
 ## Publishing notes
 
@@ -33,24 +41,24 @@ Public URLs once published (replace `<user>` with the GitHub username):
 
 ## Adding another game
 
-1. Make a folder named after the game, lowercase with hyphens, e.g. `bunker-nights/`.
+1. Make a folder named after the game, lowercase with hyphens, e.g. `new-game/`.
    The folder name becomes part of the URL, so don't rename it after the store listing links to it.
-2. Add `bunker-nights/privacy.html`. Start from the game's finished policy text in its `*-legal` folder.
+2. Add `new-game/privacy.html`. Start from the game's finished policy text in its `*-legal` folder.
    Only fill placeholders (effective date, support email, URLs); don't change legal wording without the
    legal docs being updated first. Link the stylesheet with `<link rel="stylesheet" href="../assets/style.css">`
    and add the back link `<a href="../">&larr; All games</a>` at the top.
-3. Add `bunker-nights/delete-data.html`. Copy an existing `delete-data.html` and rewrite it to match what
+3. Add `new-game/delete-data.html`. Copy an existing `delete-data.html` and rewrite it to match what
    that game really stores (local saves, cloud saves, accounts, analytics IDs, etc.) and how each is deleted.
    If the game has accounts or sign-in, Play requires this page to let users request deletion without
    reinstalling the app, so explain the email request path clearly.
 4. In `index.html`, add (or update) the game's `<li class="game">` card with links to both pages:
    ```html
    <li class="game">
-     <h2>Bunker Nights</h2>
+     <h2>New Game</h2>
      <p>One-line description.</p>
      <div class="links">
-       <a href="bunker-nights/privacy.html">Privacy policy</a>
-       <a href="bunker-nights/delete-data.html">Delete your data</a>
+       <a href="new-game/privacy.html">Privacy policy</a>
+       <a href="new-game/delete-data.html">Delete your data</a>
      </div>
    </li>
    ```
