@@ -1,0 +1,5 @@
+# app-ads.txt for apps published by Jesse Rances (individual developer).
+# PLACEHOLDER: the AdMob publisher ID is pending. Replace pub-XXXXXXXXXXXXXXXX below with the
+# real ID from AdMob (Account > Settings > Account information > Publisher ID) before launch.
+# One line covers every game under the same AdMob account. This file must stay at the domain root.
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
